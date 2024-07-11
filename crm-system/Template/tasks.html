@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tasks.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/dashboard.html">Dashboard</a></li>
+                <li><a href="/contacts.html">Contacts</a></li>
+                <li><a href="/sales.html">Sales</a></li>
+                <li><a class="activate" href="#">Tasks</a></li>
+                <li><a href="/support.html">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <div class="tasks-section">
+        <h2>Tasks</h2>
+        <button id="addTaskBtn" onclick="openAddTaskModal()">Add Task</button>
+        <div id="tasksList" class="tasks-list"></div>
+    </div>
+</main>
+
+    <!-- The Modal -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTaskModal()">&times;</span>
+            <h2 id="modalTitle">Add Task</h2>
+            <form id="taskForm">
+                <input type="hidden" id="taskId">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required></textarea>
+                <label for="dueDate">Due Date</label>
+                <input type="date" id="dueDate" name="dueDate" required>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="tasks.js"></script>
+</body>
+</html>

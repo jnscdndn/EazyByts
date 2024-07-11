@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts - CRM System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contacts.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/dashboard.html">Dashboard</a></li>
+                <li><a class="activate" href="#">Contacts</a></li>
+                <li><a href="/sales.html">Sales</a></li>
+                <li><a href="/tasks.html">Tasks</a></li>
+                <li><a href="/support.html">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contacts-section">
+            <h2>Contacts</h2>
+            <button id="addContactBtn" onclick="openAddContactModal()">Add Contact</button>
+            <div id="contactsList">
+                <!-- Contacts will be dynamically populated here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Add/Edit Contact -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContactModal()">&times;</span>
+            <h2 id="modalTitle">Add Contact</h2>
+            <form id="contactForm">
+                <input type="hidden" id="contactId" value="">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="phone">Phone:</label><br>
+                <input type="tel" id="phone" name="phone" required><br><br>
+                <button type="submit" id="saveContactBtn">Save</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- JavaScript for handling contact operations -->
+    <script src="contacts.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+/* dashboard.css */
+
+/* Dashboard section */
+.dashboard-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-section h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.dashboard-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.dashboard-card {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.dashboard-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.recent-activities {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recent-activities li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

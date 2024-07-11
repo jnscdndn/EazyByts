@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="support.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/dashboard.html" >Dashboard</a></li>
+                <li><a href="/contacts.html">Contacts</a></li>
+                <li><a href="/sales.html">Sales</a></li>
+                <li><a href="/tasks.html">Tasks</a></li>
+                <li><a class="activate" href="#">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <div class="support-section">
+        <h2>Support Tickets</h2>
+        <button id="addSupportBtn" onclick="openAddSupportModal()">Add Ticket</button>
+        <div id="supportList" class="support-list"></div>
+    </div>
+</main>
+    <!-- The Modal -->
+    <div id="supportModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSupportModal()">&times;</span>
+            <h2 id="modalTitle">Add Ticket</h2>
+            <form id="supportForm">
+                <input type="hidden" id="supportId">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required></textarea>
+                <label for="status">Status</label>
+                <select id="status" name="status" required>
+                    <option value="Open">Open</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Closed">Closed</option>
+                </select>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="support.js"></script>
+</body>
+</html>

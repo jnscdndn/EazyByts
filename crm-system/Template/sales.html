@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sales.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/dashboard.html">Dashboard</a></li>
+                <li><a href="/contacts.html">Contacts</a></li>
+                <li><a class="activate" href="#">Sales</a></li>
+                <li><a href="/tasks.html">Tasks</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="sales-section">
+        <h2>Sales</h2>
+        <button id="addSaleBtn" onclick="openAddSaleModal()">Add Sale</button>
+        <div id="salesList" class="sales-list"></div>
+    </div>
+</main>
+
+    <!-- The Modal -->
+    <div id="saleModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSaleModal()">&times;</span>
+            <h2 id="modalTitle">Add Sale</h2>
+            <form id="saleForm">
+                <input type="hidden" id="saleId">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" required>
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="sales.js"></script>
+</body>
+</html>
