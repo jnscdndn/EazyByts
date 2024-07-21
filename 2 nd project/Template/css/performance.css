@@ -1,0 +1,55 @@
+/* Performance Page Styles */
+#performanceOverview {
+    margin-bottom: 20px;
+}
+
+.performance-indicators {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.indicator {
+    background-color: #f8f9fa; 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #333333;
+    width: 100%;
+}
+
+.indicator h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.indicator p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#charts {
+    margin-top: 20px;
+    text-align: center; /* Center align the section content */
+}
+
+.charts-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    background-color: #f8f9fa; 
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1; /* Make the charts take equal space */
+}
+
+#tradesChartContainer {
+    width: 300px; /* Fixed width for the smaller chart */
+    margin: 0 auto; /* Center the smaller chart */
+}
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance - Stock Trading Simulation System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/performance.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="trade.html">Trade</a></li>
+                <li><a href="performance.html">Performance</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="performanceOverview">
+            <h2>Performance Overview</h2>
+            <div class="performance-indicators">
+                <div class="indicator">
+                    <h3>Total Profit/Loss</h3>
+                    <p id="totalProfitLoss">$0</p>
+                </div>
+                <div class="indicator">
+                    <h3>Return on Investment (ROI)</h3>
+                    <p id="roi">0%</p>
+                </div>
+                <div class="indicator">
+                    <h3>Successful Trades</h3>
+                    <p id="successfulTrades">0</p>
+                </div>
+                <div class="indicator">
+                    <h3>Failed Trades</h3>
+                    <p id="failedTrades">0</p>
+                </div>
+            </div>
+        </section>
+        <section id="charts">
+            <h2>Performance Charts</h2>
+            <div class="charts-container">
+                <div class="chart-container">
+                    <canvas id="profitLossChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="roiChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-container" id="tradesChartContainer">
+                <canvas id="tradesChart"></canvas>
+            </div>
+        </section>
+        
+        
+    </main>
+    
+    
+    <script src="js/scripts.js"></script>
+    <script src="js/performance.js"></script>
+</body>
+</html>

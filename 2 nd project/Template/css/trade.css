@@ -1,0 +1,67 @@
+/* Trade Page Styles */
+#executeTrade, #executedTrades, #pendingTrades {
+    margin-bottom: 20px;
+}
+
+#executeTrade form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#executeTrade label {
+    font-size: 1.1em;
+    color: #333333; 
+}
+
+#executeTrade input, #executeTrade select {
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    background-color: #ffffff; 
+    color: #333333; 
+}
+
+#executeTrade button {
+    background-color: #007bff; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+#executeTrade button:hover {
+    background-color: #0056b3; 
+}
+
+#executedTrades table, #pendingTrades table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#executedTrades th, #executedTrades td, #pendingTrades th, #pendingTrades td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc; 
+}
+
+#executedTrades th, #pendingTrades th {
+    background-color: #f8f9fa; 
+    color: #333333; 
+}
+
+#executedTrades td, #pendingTrades td {
+    background-color: #ffffff; 
+    color: #333333; 
+}
+
+#executedTrades td.executed, #pendingTrades td.pending {
+    color: #4caf50;
+}
+
+#executedTrades td.pending, #pendingTrades td.executed {
+    color: #f44336;
+}

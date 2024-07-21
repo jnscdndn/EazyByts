@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Stock Trading Simulation System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="trade.html">Trade</a></li>
+                <li><a href="performance.html">Performance</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="portfolio">
+            <h2>My Portfolio</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Stock</th>
+                        <th>Shares</th>
+                        <th>Buy Price</th>
+                        <th>Current Price</th>
+                        <th>Profit/Loss (%)</th>
+                        <th>Profit/Loss ($)</th>
+                        <th>Chart</th>
+                    </tr>
+                </thead>
+                <tbody id="portfolioTable">
+                    <!-- Dummy data -->
+                    <tr>
+                        <td>APPL</td>
+                        <td>50</td>
+                        <td>$150</td>
+                        <td>$155</td>
+                        <td class="positive">+3.33%</td>
+                        <td class="positive">+$250</td>
+                        <td><button onclick="showChart('APPL')">View Chart</button></td>
+                    </tr>
+                    <tr>
+                        <td>GOOGL</td>
+                        <td>20</td>
+                        <td>$2750</td>
+                        <td>$2730</td>
+                        <td class="negative">-0.73%</td>
+                        <td class="negative">-$400</td>
+                        <td><button onclick="showChart('GOOGL')">View Chart</button></td>
+                    </tr>
+                    <tr>
+                        <td>AMZN</td>
+                        <td>15</td>
+                        <td>$3300</td>
+                        <td>$3320</td>
+                        <td class="positive">+0.61%</td>
+                        <td class="positive">+$300</td>
+                        <td><button onclick="showChart('AMZN')">View Chart</button></td>
+                    </tr>
+                    <tr>
+                        <td>MSFT</td>
+                        <td>30</td>
+                        <td>$250</td>
+                        <td>$255</td>
+                        <td class="positive">+2.00%</td>
+                        <td class="positive">+$150</td>
+                        <td><button onclick="showChart('MSFT')">View Chart</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="total-profit-loss">
+                <h3>Total Profit/Loss</h3>
+                <p id="totalProfitLoss">$300</p>
+            </div>
+        </section>
+        
+        <section id="chartSection" style="display: none;">
+            <h2 id="chartTitle"></h2>
+            <canvas id="stockChart"></canvas>
+        </section>
+    </main>
+    
+    <script src="js/scripts.js"></script>
+    <script src="js/portfolio.js"></script>
+</body>
+</html>
